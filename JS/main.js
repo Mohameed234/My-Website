@@ -15,6 +15,7 @@ function hundleMenu(){
 const homeLink = document.querySelector('.home-link')
 const aboutLink = document.querySelector('.about-link')
 const servicesLink = document.querySelector('.services-link')
+const projectslink = document.querySelector('.projects-link')
 const skillsLink = document.querySelector('.skills-link')
 const contact = document.querySelector('.contact-link')
 
@@ -28,12 +29,16 @@ aboutLink.addEventListener("click", ()=>{
 servicesLink.addEventListener("click", ()=>{
     hundleMenu()
 })
+projectslink.addEventListener("click", ()=>{
+    hundleMenu()
+})
 skillsLink.addEventListener("click", ()=>{
     hundleMenu()
 })
 contact.addEventListener("click", ()=>{
     hundleMenu()
 })
+
 
 
 
@@ -57,9 +62,13 @@ sr.reveal(`.about .container-imges` ,{origin: 'left'})
 sr.reveal(`.about .container-texts` ,{origin: 'right'})
 sr.reveal(`.services .card` ,{interval: 200})
 sr.reveal(`.services h1`, )
+sr.reveal(`.project-card` ,{interval: 200})
+sr.reveal(`.projects h1`, )
 sr.reveal(`.skills .container-skills h1` ,{origin: 'left'})
 sr.reveal(`.skills .skill` ,{origin: 'left' , delay: 600 , interval: 100})
 sr.reveal(`.skills .container-imges` ,{origin: 'right'})
 sr.reveal(`.content-footer h2` ,{delay: 600} )
 sr.reveal(`.content-footer p` )
+
+
 

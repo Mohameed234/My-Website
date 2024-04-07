@@ -105,6 +105,7 @@ nav ul li{
     list-style: none;
     display: inline-block;
     margin: 0.8rem 1.5rem;
+    font-size: 0.8rem;
 
 }
 nav ul li a{
@@ -227,13 +228,80 @@ nav ul li a:hover{
 
 /* End Services Section  */
 
+/* Start Projects  */
+.projects{
+    background-color: var(--bg-color-2);
+    padding: 2rem var(--padding);
+}
+.projects h1{
+    margin: 3rem;
+}
+.projects .box{
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    
+}
+
+.project-card {
+    width: 300px;
+    background-color: var(--bg-color-1);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 1.3rem;
+    
+}
+
+.project-card img{
+    width: 100%;
+    height: 55%;
+    margin-bottom: 5px;
+    
+}
+.project-card i{
+    font-size: 0.8rem;
+}
+.project-card a, .demo{
+    background-color: var(--bg-color-2);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    bottom: 148px;
+    right: 35px;
+    transition: 0.2s;
+}
+a.demo{
+    right: 6px;
+}
+
+.project-card a:hover{
+    background-color: #3e4344;
+}
+.project-text h5{
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+.project-text p{
+    font-size: 1rem;
+    padding: 10px;
+    
+}
+/* End Projects  */
+
 
 
 
 
 /* Start Skills Section  */
 .skills{
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-1);
     padding: 2rem var(--padding);
     display: flex;
     align-items: center;
@@ -410,6 +478,22 @@ footer .content-footer .end{
         justify-content: center;
         gap: 1rem;
     }
+
+    /* Start Projects  */
+
+    .project-card{
+        width: 245px;
+    }
+    .project-card a, .demo {
+        bottom: 120px;
+    }
+    .project-text h5 {
+        font-size: 1rem;
+    }
+    .project-text p{
+        font-size: 0.8rem;
+    }
+
 
 
     /* Start Skills Section  */
