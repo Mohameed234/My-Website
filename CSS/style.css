@@ -11,6 +11,98 @@
     --bg-color-2: #22282a;
     --padding: 8%;
 }
+/* Case Study button and modal */
+.project-card .case-study-btn{
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.project-card .case-study-btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+}
+
+/* Hide legacy icon links inside project cards */
+.project-card a, .project-card .demo{
+    display: none !important;
+}
+
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+.modal.open{ display: flex; }
+.modal-content{
+    background: var(--bg-color-1);
+    border-radius: 16px;
+    max-width: 980px;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    transform: translateY(12px);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    position: relative;
+    height: 60vh;
+}
+.modal.open .modal-content{
+    transform: translateY(0);
+    opacity: 1;
+}
+.modal-close{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: var(--bg-color-2);
+    color: var(--light-color);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.modal-image{ position: relative; min-height: 280px; }
+.modal-image img{ width: 100%; height: 100%; }
+.modal-body{ padding: 1.2rem 1.25rem; display: flex;
+    flex-direction: column;
+    gap: 6px; }
+.modal-header{ display: flex; align-items: center; justify-content: flex-start; gap: 0.75rem; border-bottom: 1px solid #2a2f31; padding-bottom: 0.75rem; margin-bottom: 0.75rem; }
+.modal-title{ margin: 0; font-size: 1.5rem; }
+.modal-badges{ display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 0.75rem; }
+.badge{ background: var(--bg-color-2); color: var(--light-color); border-radius: 999px; padding: 0.25rem 0.65rem; font-size: 0.8rem; white-space: nowrap; }
+.modal-description{ color: var(--secondary-color); margin-bottom: 1rem; max-height: 180px; overflow: auto; }
+.modal-details{ list-style: none; padding: 0; margin: 0 0 1rem; color: var(--secondary-color); }
+.modal-details li{ margin: 0.25rem 0; }
+.modal-close{ z-index: 2; }
+.modal-links{ display: flex; gap: 0.75rem; }
+.modal-links .btn{ padding: 0.5rem 1rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 0.5rem; }
+.modal-links .modal-code.btn{ background: var(--bg-color-2); }
+
+
+
+@media screen and (max-width: 767px){
+    .modal-content{ grid-template-columns: 1fr; }
+}
 ::-webkit-scrollbar{
     width: 10px;
     background-color: var(--light-color);
@@ -48,6 +140,8 @@ h3{
     font-size: 1.5rem;
     margin-bottom: 3.5rem;
 }
+@keyframes typingCursorBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.container-text h3 span::after{content:"|";margin-left:6px;color:var(--primary-color);animation:typingCursorBlink 1s step-end infinite}
 h4{
     font-size: 1.25rem;
     letter-spacing: 0.12rem;
@@ -191,7 +285,7 @@ nav ul li a:hover{
     width: 90%;
 }
 .about .container-texts{
-    width: 35%;
+    width: 45%;
 }
 /* End About Section  */
 
@@ -209,20 +303,62 @@ nav ul li a:hover{
 .box{
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
 }
 .card{
     width: 300px;
     background-color: var(--bg-color-2);
     border-radius: 20px;
-    padding: 1.3rem 2rem;
+    padding: 1.6rem 2rem;
     text-align: center;
+    position: relative;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
 }
 .card i{
-    font-size: 3.12rem;
-    text-align: center;
-    color: var(--primary-color);
-    margin: 3rem;
-    
+    font-size: 1.25rem;
+    color: var(--light-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 39, 75, 0.12);
+    box-shadow: 0 0 0 4px rgba(255, 39, 75, 0.08);
+    margin: 1.4rem auto 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+    border-color: var(--primary-color);
+}
+.card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+.card:hover::after{
+    width: 100%;
+}
+.card:hover i{
+    transform: scale(1.08);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 6px rgba(255, 39, 75, 0.18);
+}
+.card h5{
+    letter-spacing: 0.5px;
+}
+.card .par p{
+    color: var(--secondary-color);
 }
 
 
@@ -235,6 +371,31 @@ nav ul li a:hover{
 }
 .projects h1{
     margin: 3rem;
+}
+.projects .tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+.projects .tab{
+    background-color: var(--bg-color-1);
+    color: var(--light-color);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.25s;
+    font-size: 0.9rem;
+}
+.projects .tab:hover{
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+.projects .tab.active{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 .projects .box{
     flex-wrap: wrap;
@@ -249,9 +410,10 @@ nav ul li a:hover{
     text-align: center;
     overflow: hidden;
     position: relative;
-    padding-bottom: 1.3rem;
+    padding-bottom: 4.3rem;
     
 }
+.project-card.hidden{display:none}
 
 .project-card img{
     width: 100%;
@@ -273,7 +435,7 @@ nav ul li a:hover{
     color: #fff;
     position: absolute;
     z-index: 1;
-    bottom: 148px;
+    bottom: 240px;
     right: 35px;
     transition: 0.2s;
 }
@@ -518,15 +680,15 @@ footer .content-footer .end{
     }
 
     /* Start Footer  */
-    footer .content-footer p{
-        width: 100%;
-        font-size: 0.9rem;
-    }
-    footer .content-footer h2 {
-        font-size: 2.0rem;
-        letter-spacing: 0.12rem;
-        cursor: pointer;
-    }
+footer .content-footer p{
+    width: 100%;
+    font-size: 0.9rem;
+}
+footer .content-footer h2 {
+    font-size: 2.0rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
 
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -848,4 +1010,33 @@ footer .content-footer .end{
     }
 
 
+}
+footer{ background-color: var(--bg-color-2); padding: 2rem var(--padding); }
+footer .content-footer{ max-width: 1200px; margin: 0 auto; }
+footer .footer-grid{ display: grid; grid-template-columns: 1.6fr 1fr; gap: 2rem; align-items: start; }
+footer .footer-left h2{ margin-bottom: 1.5rem; font-size: 4.2rem; }
+footer .footer-left p{ margin-bottom: 3rem;     font-size: 1.3rem;
+    text-align: start; }
+footer .footer-left ul li{
+    font-size: 1.2rem;
+}
+
+footer .contact-list{ list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+footer .contact-list i{ margin-right: 0.6rem; color: var(--primary-color); }
+footer .contact-list a{ color: var(--light-color); }
+
+.contact-form{ display: grid; gap: 1rem; }
+.contact-form .grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.contact-form input,
+.contact-form textarea{ width: 100%; background: var(--bg-color-1); color: var(--light-color); border: 1px solid #2a2f31; border-radius: 14px; padding: 1rem 1.1rem; font-size: 1rem; }
+.contact-form textarea{ min-height: 220px; }
+.contact-form input:focus,
+.contact-form textarea:focus{ outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(255,39,75,0.15); }
+.contact-form .btn{ width: 100%; justify-self: start; cursor: pointer;}
+
+@media screen and (max-width: 992px){
+  footer .footer-grid{ grid-template-columns: 1fr; }
+}
+@media screen and (max-width: 576px){
+  .contact-form .grid-2{ grid-template-columns: 1fr; }
 }

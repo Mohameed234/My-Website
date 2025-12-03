@@ -57,7 +57,7 @@
           <h1>Mohamed <span>Ibrahim</span></h1>
           <h3>I'm <span>Front-End</span> Developer</h3>
           <a
-            href="https://drive.google.com/file/d/1h0b1JAtCvLKKHADMraPyfnFfLPzai5xU/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1WjIF1tEwWUFg911Kq9RQSQ-C8IUGrO4p/view?usp=sharing"
             target="_blank"
             class="btn"
             >Download CV</a
@@ -82,7 +82,7 @@
               />
             </a>
             <a
-              href="https://www.linkedin.com/in/mohamed-ibrahim-35b319254/"
+              href="https://www.linkedin.com/in/mohamed-ibrahim-b60158350"
               target="_blank"
             >
               <img
@@ -101,6 +101,7 @@
             class="mypic"
             src="./IMG/muhamed_ibrahim_1701551364116.jpeg"
             alt=""
+            style="display: none;"
           />
         </div>
       </div>
@@ -114,11 +115,11 @@
       </div>
       <div class="container-texts">
         <h1>About <span>Me</span></h1>
-        <h5><span>Front-End</span> Developer</h5>
+        <h5><span>Full-Stack</span> Developer</h5>
         <p>
-          I'm a front-end web developer. I can provide clean code and pixel
-          perfect design. I also make the website more & more interactive with
-          web animation. I can use bootstrap and React.js.
+          I’m Mohamed Ibrahim, a Full-Stack Developer specializing in Laravel, React, and Vue.
+          I build complete end-to-end systems — backend APIs, dashboards, authentication, and responsive frontends.
+          I focus on clean code, performance, and creating reliable solutions tailored to real business needs.
         </p>
       </div>
     </section>
@@ -132,31 +133,61 @@
           <i class="fa-solid fa-person"></i>
           <h5>Single Web Page</h5>
           <div class="par">
-            <p>A single web page for your company or personal page</p>
+            <p>Clean, modern one-page website for your brand</p>
           </div>
         </div>
         <div class="card">
           <i class="fa-solid fa-cart-shopping"></i>
           <h5>E-Commurce</h5>
           <div class="par">
-            <p>An ECommurce website for your store</p>
+            <p>Online stores with products, payments, and full management</p>
           </div>
         </div>
         <div class="card">
           <i class="fa-solid fa-rocket"></i>
           <h5>Web App System</h5>
           <div class="par">
-            <p>A web system that can manage your work</p>
+            <p>Inventory, reservation, and billing systems to manage operations efficiently.</p>
           </div>
         </div>
+        <!-- <div class="card">
+          <i class="fa-solid fa-palette"></i>
+          <h5>UI/UX Design</h5>
+          <div class="par">
+            <p>Modern, accessible, and pixel-perfect interfaces</p>
+          </div>
+        </div> -->
+        <div class="card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h5>Full Web Application </h5>
+          <div class="par">
+            <p>Complete, scalable web apps tailored to your needs</p>
+          </div>
+        </div>
+        <!-- <div class="card">
+          <i class="fa-solid fa-plug"></i>
+          <h5>Dashboard & Admin Panels</h5>
+          <div class="par">
+            <p>Custom dashboards with analytics and management tools</p>
+          </div>
+        </div> -->
       </div>
     </section>
     <!-- End Services Section  -->
     <!-- Start Projects Section  -->
     <section class="projects" id="projects">
       <h1 class="text-center">My <span>Projects</span></h1>
+      <div class="tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="htmlcss">HTML&CSS</button>
+        <button class="tab" data-filter="js">JS</button>
+        <button class="tab" data-filter="react">ReactJS</button>
+        <button class="tab" data-filter="vue">VueJS</button>
+        <button class="tab" data-filter="laravel">Laravel</button>
+        <button class="tab" data-filter="fullstack">Full Stack</button>
+      </div>
       <div class="box">
-        <div class="project-card">
+        <div class="project-card" data-category="react" data-tech="React,Redux,Responsive,API" data-description="A fully responsive e-commerce frontend built with React and Redux, featuring dynamic product rendering, global state management, real-time cart updates, and optimized performance across mobile and desktop devices.">
           <a href="https://github.com/Mohameed234/ECommurce-React-Redux" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -165,11 +196,117 @@
           </a>
           <img src="IMG/ecommurce.PNG" alt="ecommurce">
           <div class="project-text">
-            <h5>Responsive ECommurce</h5>
-            <p>An Ecommurce app with react, redux and api</p>
+            <h5>Responsive E-Commerce</h5>
+            <p>A fully responsive e-commerce app built with React, Redux</p>
           </div>
         </div>
-        <div class="project-card">
+
+         <div class="project-card" data-category="laravel" data-tech="Laravel,Blade,MySQL" data-description="A complete inventory management system built with Laravel (MVC), featuring item tracking, multi-location stock movement, role-based access, and optimized database operations for high-volume transactions.">
+          <a href="https://github.com/Mohameed234/Stockly" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          
+          <img src="IMG/stockly system.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>Stockly</h5>
+            <p>A complete inventory management system built with Laravel MVC</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="laravel" data-tech="Laravel,Blade,MySQL" data-description="A complete invoice management system built with Laravel MVC, including client management, invoice generation, tax/discount handling, PDF export, and secure role-based access.">
+          <a href="https://github.com/Mohameed234/Stockly" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          
+          <img src="IMG/invoice-system.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>Invoice-system</h5>
+            <p>A complete Invoice management system built with Laravel MVC</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="fullstack" data-tech="Laravel,React,MySQL,API" data-description="A full-stack restaurant system built with Laravel (API) and React, featuring a full admin panel for menu, orders, tables, reservations, and real-time kitchen updates.">
+          <a href="https://github.com/Mohameed234/Restaurant-System" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          
+          <img src="IMG/Resterunt system.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>Restaurant System</h5>
+            <p>A full-stack restaurant system built with Laravel and React, including a complete admin panel</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="vue" data-tech="Vue.js,API" data-description="A fully responsive e-commerce front-end built with Vue.js, featuring dynamic product rendering, cart logic, routing, and API-ready architecture.">
+          <a href="https://github.com/Mohameed234/E-Commerce-Front-End" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          
+          <img src="IMG/Ecommerce app front.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>E-Commerce-Front-End</h5>
+            <p>An E-commerce front-end built entirely with Vue.js</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="laravel" data-tech="Laravel,MySQL,API" data-description="A scalable e-commerce back-end built with Laravel, featuring product/catalog management, orders, cart APIs, authentication, and clean MVC architecture.">
+          <a href="https://github.com/Mohameed234/E-Commerce-Back-End" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          
+          <img src="IMG/Ecommerce app front.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>E-Commerce-Back-End </h5>
+            <p>An E-commerce back-end built entirely with Laravel</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="htmlcss" data-tech="HTML,CSS,JS,Responsive" data-description="A modern, fully responsive company website built with HTML, CSS, JavaScript, featuring smooth UI, clean structure, and integrated light/dark mode support.">
+          <a href="https://github.com/Mohameed234/CodeMesh" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+
+           <a href="https://mohameed234.github.io/CodeMesh/" target="_blank" class="demo">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          
+          <img src="IMG/codemesh.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>CodeMesh</h5>
+            <p>A modern, responsive company website with light and dark modes</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="js" data-tech="JavaScript,HTML,CSS" data-description="A fun, interactive browser game built with JavaScript, featuring smooth animations and responsive gameplay.">
+          <a href="https://github.com/Mohameed234/Bird-Game" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="https://mohameed234.github.io/Bird-Game/" target="_blank" class="demo">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          
+          <img src="IMG/birdgame.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>Bird-Game</h5>
+            <p>A fun and interactive browser game developed using JavaScript</p>
+          </div>
+        </div>
+
+         <div class="project-card" data-category="js" data-tech="JavaScript,HTML,CSS" data-description="A classic interactive browser game built with JavaScript, featuring responsive controls and smooth gameplay.">
+          <a href="https://github.com/Mohameed234/Snake-Game" target="_blank">
+             <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="https://mohameed234.github.io/Snake-Game/" target="_blank" class="demo">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          
+          <img src="IMG/snakgame.PNG" alt="ecommurce">
+          <div class="project-text">
+            <h5>Snake-Game</h5>
+            <p>A fun and interactive browser game developed using JavaScript</p>
+          </div>
+        </div>
+
+
+        <div class="project-card" data-category="htmlcss" data-tech="HTML,CSS" data-description="A modern corporate website built with responsive design and professional UI/UX.">
           <a href="https://github.com/Mohameed234/JFC-law" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -178,11 +315,11 @@
           </a>
           <img src="IMG/jfc.PNG" alt="jfc">
           <div class="project-text">
-            <h5>JFC WebSite</h5>
-            <p>WebSite For Company</p>
+            <h5>JFC Company Website</h5>
+            <p>A modern corporate website designed and developed for JFC Company</p>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-category="htmlcss" data-tech="HTML,CSS" data-description="A responsive tourism website built with HTML & CSS.">
           <a href="https://github.com/Mohameed234/EGY-Tourism" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -192,10 +329,11 @@
           <img src="IMG/egy.PNG" alt="jfc">
           <div class="project-text">
             <h5>EGY Tourism</h5>
-            <p>WebSite using HTML & CSS </p>
+            <p>A clean and responsive tourism website built with HTML & CSS </p>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-category="htmlcss" data-tech="HTML,CSS,Bootstrap" data-description="Responsive Bondi Design
+A fully responsive landing page recreated using Bootstrap">
           <a href="https://github.com/Mohameed234/Landing-Page-Using-BootStrap" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -205,10 +343,10 @@
           <img src="IMG/bondi.PNG" alt="bondi">
           <div class="project-text">
             <h5> Responsive Bondi Design</h5>
-            <p>landing page using bootstrap</p>
+            <p>A fully responsive landing page recreated using Bootstrap</p>
           </div>
         </div>
-        <div class="project-card">
+        <!-- <div class="project-card" data-category="htmlcss">
           <a href="https://github.com/Mohameed234/iphone-products" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -220,8 +358,9 @@
             <h5>IPhone Products</h5>
             <p>WebSite Page using HTML & CSS & JS</p>
           </div>
-        </div>
-        <div class="project-card">
+        </div> -->
+        <div class="project-card" data-category="htmlcss" data-tech="HTML,CSS" data-description="Giftos Shop
+A modern and stylish landing page design for an online gift shop">
           <a href="https://github.com/Mohameed234/Shopping-Landing-Page" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -231,10 +370,10 @@
           <img src="IMG/giftos.PNG" alt="giftos">
           <div class="project-text">
             <h5>Giftos Shop</h5>
-            <p>Landing page design</p>
+            <p>A modern and stylish landing page design for an online gift shop</p>
           </div>
         </div>
-        <div class="project-card">
+        <!-- <div class="project-card" data-category="htmlcss">
           <a href="https://github.com/Mohameed234/Adidas-Design" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -246,8 +385,8 @@
             <h5>Adidas</h5>
             <p>Web page design</p>
           </div>
-        </div>
-        <div class="project-card">
+        </div> -->
+        <!-- <div class="project-card" data-category="htmlcss">
           <a href="https://github.com/Mohameed234/Avatar-Design" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -259,8 +398,8 @@
             <h5>Avatar</h5>
             <p>Web page design</p>
           </div>
-        </div>
-        <div class="project-card">
+        </div> -->
+        <!-- <div class="project-card" data-category="htmlcss">
           <a href="https://github.com/Mohameed234/Four-Card-Feature" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -272,8 +411,8 @@
             <h5>Cards</h5>
             <p>Using frontmentor for making cards design</p>
           </div>
-        </div>
-        <div class="project-card">
+        </div> -->
+        <div class="project-card" data-category="htmlcss" data-description="A responsive landing page built with HTML & CSS.">
           <a href="https://github.com/Mohameed234/HTML_And_CSS_Templet_one" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -283,10 +422,10 @@
           <img src="IMG/templete.PNG" alt="templete">
           <div class="project-text">
             <h5>Responsive landing Page</h5>
-            <p>landing Page using HTML & CSS</p>
+            <p>A responsive landing page built to showcase clean HTML & CSS </p>
           </div>
         </div>
-        <div class="project-card">
+        <!-- <div class="project-card" data-category="htmlcss">
           <a href="https://github.com/Mohameed234/Dashboard" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -298,8 +437,8 @@
             <h5>Dashboard</h5>
             <p>Designing dashboard using HTML & CSS</p>
           </div>
-        </div>
-        <div class="project-card">
+        </div> -->
+        <!-- <div class="project-card" data-category="htmlcss">
           <a href="https://github.com/Mohameed234/Fylo-Landing-page" target="_blank">
              <i class="fa-solid fa-code"></i>
           </a>
@@ -311,7 +450,7 @@
             <h5>Fylo-landing-Page</h5>
             <p>Designing landiing page using HTML & CSS</p>
           </div>
-        </div>
+        </div> -->
        
       
       </div>
@@ -319,6 +458,28 @@
     <!-- End Projects Section  -->
 
     <!-- Start Skills Section  -->
+    <!-- Case Study Modal -->
+    <div id="case-study-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close">×</button>
+        <div class="modal-image">
+          <img src="" alt="" />
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <h3 class="modal-title"></h3>
+          </div>
+          <div class="modal-badges"></div>
+          <p class="modal-description"></p>
+          
+          <div class="modal-links">
+            <a href="#" target="_blank" class="modal-demo btn"><i class="fa-solid fa-eye"></i><span style="color: white;">View Demo</span></a>
+            <a href="#" target="_blank" class="modal-code btn"><i class="fa-solid fa-code"></i><span>View Code</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section class="skills" id="skills">
       <div class="container-skills">
         <h1>My <span>Skills</span></h1>
@@ -331,6 +492,27 @@
           </div>
           <div class="skill">
             <img src="./IMG/file_type_js_official_icon_130509.png" alt="js" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/ts.svg" alt="ts" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/next.svg" alt="next" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/tailwind.svg" alt="tailwind" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/php.svg" alt="php" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/laravel.svg" alt="laravel" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/mysql.svg" alt="mysql" />
+          </div>
+          <div class="skill">
+            <img src="./IMG/vue.svg" alt="vue" />
           </div>
           <div class="skill">
             <img
@@ -371,8 +553,29 @@
     <!-- Start Footer  -->
     <footer id="footer">
       <div class="content-footer">
-        <h2>Mohamed <span>Ibrahim</span></h2>
-        <p>For any web services <span>+201094854427</span></p>
+        <div class="footer-grid">
+          <div class="footer-left">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Available for web projects and collaborations. Reach me via email, WhatsApp, or phone.</p>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:mohamedibrahimy911@gmail.com" class="email">mohamedibrahimy911@gmail.com</a></li>
+              <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/201094854427" target="_blank" class="whatsapp">+201094854427</a></li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:+201030212287" class="phone">+201030212287</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <form id="contact-form" class="contact-form">
+              <div class="grid-2">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Your email" required />
+              </div>
+              <div class="form-row">
+                <textarea name="message" placeholder="Your message" rows="8" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
         <p class="end">CopyRight © By Mohamed Ibrahim</p>
       </div>
     </footer>
